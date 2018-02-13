@@ -1,4 +1,12 @@
 <?php
+
+session_set_cookie_params( 30 * 60,"/");
+session_start();
+
+if (!isset($_SESSION["exists"])){
+    header("Location: login.php");
+}
+
 if(!(isset($_POST['orderID']) && isset($_POST['date']) && isset($_POST['customerID']) && isset($_POST['orderDetails']))){
     echo "Enter Valid Information";
     die;

@@ -1,10 +1,10 @@
 <?php
-//session_set_cookie_params( 30 * 60,"/");
-//session_start();
-//
-//if (!isset($_SESSION["exists"])){
-//    header("Location: login.php");
-//}
+session_set_cookie_params( 30 * 60,"/");
+session_start();
+
+if (!isset($_SESSION["exists"])){
+    header("Location: login.php");
+}
 
 
 $connection = mysqli_connect("localhost", "root", "", "php_db", "3306");
